@@ -4,7 +4,7 @@ import cors from "cors";
 import http from "http";
 
 
-const host : string = "192.168.100.252";
+const host : string = "10.1.62.190";
 const port : number  = 8989;
 
 const app = express();
@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(cors(corsOptions));
 
 
-app.get("/", cors(), (req: Request, res:Response) => {
+app.get("/", cors(), ( res: Response) => {
   res.send("servidor ok");
 });
 
