@@ -2,9 +2,9 @@ import express,{Response} from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import http from "http";
+import  "./config/SequelizeConfig";
 
-
-const host : string = "10.1.62.190";
+const host : string = "localhost";
 const port : number  = 8989;
 
 const app = express();
@@ -27,6 +27,5 @@ app.get("/", cors(), ( res: Response) => {
 const server = http.createServer(app);
 
 server.listen(port, host, async () => {
-  
   console.log(`Servidor Rodando http://${host}:${port}/`);
 });
